@@ -1,0 +1,27 @@
+<wxs module="arr_fun" src="../discover/arr_search.wxs"></wxs>
+
+<view class="bg">
+  <image class="img" mode="aspectFill" src="{{homepage.bg}}"></image>
+</view>
+<view class="container">
+  <view class="homepage">
+    <view class="divline1"></view>
+    <view class="name-INS">
+      <image class="avatar" src="{{homepage.avatar}}" bindtap="previewavatar" data-avatar="{{homepage.avatar}}">
+      </image>
+      <text class="name" decode="{{true}}">{{homepage.name}}</text>
+      <text class="INS" decode="{{true}}">
+        {{homepage.ins}}</text>
+    </view>
+    <button class="btn" bindtap="follow" data-name="{{homepage.name}}">
+      <text wx:if="{{arr_fun.array_search(homepage.name, folist)}}" class="fo">已关注</text>
+      <text wx:else class="fo">关注</text>
+    </button>
+  </view>
+  <view class="divline2"></view>
+  <view wx:for="{{profile}}" wx:key="index" class="post">
+    <image class="image" mode="widthFix" src="{{item.img}} " bindtap="previewimg" data-img="{{item.img}}" bindlongpress="star">
+    </image>
+    <view class="divline3"></view>
+  </view>
+</view>

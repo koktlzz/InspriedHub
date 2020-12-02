@@ -1,0 +1,51 @@
+/* miniprogram/pages/discover.wxss */
+.post {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 750rpx;
+}
+
+.name-img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  padding-left: 5%;
+  background-color: white;
+  height: 100rpx;
+}
+
+.name-img .img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.name-img .name {
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+}
+
+.name-img .btn {
+  margin-right: 10%;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  height: 25pt;
+  line-height: 22.5pt;
+}
+
+.name-img .btn::after {
+  border: none
+}
+
+.name-img .btn .fo {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 12pt;
+}

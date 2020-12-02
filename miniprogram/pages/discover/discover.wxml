@@ -1,0 +1,17 @@
+<wxs module="arr_fun" src="./arr_search.wxs"></wxs>
+
+<view class="container">
+  <view wx:for="{{profile}}" wx:key="unique" class="post">
+    <view class="name-img">
+      <image class="img" src="{{item.avatar}}" bindtap="gotohomepage" data-name="{{item.name}}"></image>
+      <text class="name" decode="{{true}}" bindtap="gotohomepage"
+        data-name="{{item.name}}">&nbsp;&nbsp;&nbsp;{{item.name}}</text>
+      <button class="btn" bindtap="follow" data-name="{{item.name}}">
+        <text wx:if="{{arr_fun.array_search(item.name, folist)}}" class="fo">已关注</text>
+        <text wx:else class="fo">关注</text>
+      </button>
+    </view>
+    <image class="image" mode="widthFix" src="{{item.img}}" bindtap="preview" data-img="{{item.img}}" bindlongpress="star">
+    </image>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<view class="user">
+  <image src="{{useravatar}}" class="img"></image>
+  <view class="name">{{nickName}}</view>
+  <text class="slogan">正在关注:</text>
+</view>
+<block wx:if="{{folist.length != 0}}">
+  <view wx:for="{{name}}" wx:key="unique" bindtap="gotohomepage" data-name="{{item}}" class="block">
+    <view class="name-img">
+      <image src="{{avatar[index]}}" class="img"></image>
+      <view class="name-INS">
+        <text class="name">{{item}}</text>
+        <text class="INS">{{ins[index]}}</text>
+      </view>
+    </view>
+    <view class="divline2"></view>
+  </view>
+</block>
+<block wx:else>
+  <text class="info" bindtap="switchtabbar">您还没有任何关注\n点击发现更多灵感</text>
+</block>

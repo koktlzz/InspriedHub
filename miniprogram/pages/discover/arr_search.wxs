@@ -1,0 +1,15 @@
+var array_search = {
+    array_search: function (search, array) {
+        if (array === undefined) return false;
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] == search) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+module.exports = {
+    array_search: array_search.array_search
+}

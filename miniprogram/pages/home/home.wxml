@@ -1,0 +1,15 @@
+<view class="container">
+  <view>
+    <text>\n</text>
+    <text class="home-title">Inspire List</text>
+  </view>
+  <view wx:for="{{3}}" wx:key="unique" wx:for-index="i" class="profile-row">
+    <view wx:for="{{3}}" wx:key="unique" wx:for-index="j" class="name-img">
+      <image src="{{profile[i * 3 + j].img}}" class="profile-img" bindtap="gotoprofile"
+        data-name="{{profile[i * 3 + j].name}}"></image>
+      <text class="profile-name" bindtap="gotoprofile"
+        data-name="{{profile[i * 3 + j].name}}">{{profile[i * 3 + j].name}}</text>
+    </view>
+    <text>\n\n\n\n\n</text>
+  </view>
+</view>
