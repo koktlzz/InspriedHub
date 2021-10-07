@@ -1,4 +1,3 @@
-/* miniprogram/pages/discover.wxss */
 .post {
   text-align: center;
   display: flex;
@@ -9,51 +8,11 @@
   width: 750rpx;
 }
 
-.name-img {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-top: 2.5%;
-  padding-bottom: 2.5%;
-  padding-left: 5%;
-  background-color: white;
-}
-
-.name-img .img {
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
-}
-
-.name-img .name {
-  font-size: 15px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: 700;
-}
-
-.name-img .btn {
-  margin-right: 10%;
-  border: 1px solid #000000;
-  border-radius: 20px;
-  height: 20pt;
-  line-height: 16pt;
-}
-
-.name-img .btn::after {
-  border: none
-}
-
-.name-img .btn .fo {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: 700;
-  font-size: 10pt;
-}
-
 .homepage{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: white;
+  background-color: rgb(248, 239, 228);
   text-align: center;
   width: 100%;
 }

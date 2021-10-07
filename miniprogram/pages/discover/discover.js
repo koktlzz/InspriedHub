@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    profile: [],
+    post: [],
     folist: [],
     starlist: []
   },
@@ -63,11 +63,11 @@ Page({
       })
       this.data.starlist.push(img),
       console.log("收藏成功", img)
-
     }
     this.setData({
       starlist: this.data.starlist
     })
+
   },
   // 更新页面
   updatepage: function () {
@@ -112,10 +112,10 @@ Page({
         database: "postlist"
       }
     }).then(res => {
-      var olddata = this.data.profile
+      var olddata = this.data.post
       var newdata = olddata.concat(res.result.data)
       this.setData({
-        profile: newdata
+        post: newdata
       })
       updatedb = res.result.data
     })
@@ -172,7 +172,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    var rbskipnum = this.data.profile.length
+    var rbskipnum = this.data.post.length
     if (updatedb.length != 0) {
       wx.showLoading({
         title: '加载中...',

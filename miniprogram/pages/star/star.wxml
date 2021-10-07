@@ -1,2 +1,12 @@
-<text>收藏列表</text>
+<wxs module="arr_fun" src="../discover/arr_search.wxs"></wxs>
 
+<view>
+  <text>\n</text>
+  <text class="star-title">Your Stars</text>
+  <text>\n</text>
+</view>
+<view wx:for="{{row}}" wx:key="unique" wx:for-index="i" class="star-row">
+  <view wx:for="{{3}}" wx:key="unique" wx:for-index="j">
+    <image wx:if="{{arr_fun.array_search(starlist[i * 3+ j], starlist)}}" src="{{starlist[i * 3+ j]}}" class="star-img" bindtap="previewimg" data-img="{{starlist[i * 3+ j]}}" bindlongpress="unstar"></image>
+  </view>
+</view>

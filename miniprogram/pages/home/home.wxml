@@ -1,7 +1,7 @@
 <view class="container">
   <view>
     <text>\n</text>
-    <text class="home-title">Inspire List</text>
+    <text class="home-title">Inspire Hub</text>
   </view>
   <view wx:for="{{3}}" wx:key="unique" wx:for-index="i" class="profile-row">
     <view wx:for="{{3}}" wx:key="unique" wx:for-index="j" class="name-img">

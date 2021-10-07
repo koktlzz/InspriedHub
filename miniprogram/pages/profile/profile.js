@@ -71,9 +71,7 @@ Page({
       console.log("收藏成功", img)
 
     }
-    this.setData({
-      starlist: this.data.starlist
-    })
+
     console.log("收藏列表:", this.data.starlist)
   },
   // 预览帖子图片
